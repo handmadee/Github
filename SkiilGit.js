@@ -23,6 +23,7 @@
 // git add : thêm file
 // *************************
 // git commit : lưu file
+
 // fix : sửa lỗi
 // feat : thêm tính năng
 // refactor : tái cấu trúc code
@@ -32,6 +33,29 @@
 // chore : thay đổi cấu hình
 // perf : cải thiện hiệu suất <Tăng tốc độ performance>
 // revert : quay lại commit trước đó
+
+
+// Git commit theo chuẩn 
+// 1. Tên commit không quá 50 ký tự
+// 2. Tên commit không viết hoa
+// 3. Tên commit không có dấu câu
+// 4. Tên commit không có dấu cách ở đầu
+// hạn chế 2 commit cùng một lúc
+// type(scope): subject // nội dung commit 
+// type: loại commit
+// scope: phạm vi commit
+// subject: nội dung commit
+
+// git commit -m "fix(footer): fix footer" // sửa lỗi footer
+// git commit -m "feat(header): add header" // thêm header
+// git commit -m "refactor(header): refactor header" // tái cấu trúc header
+// git commit -m "style(header): change style header" // thay đổi style header
+// git commit -m "docs(header): change docs header" // thay đổi tài liệu header
+// git commit -m "test(header): add test header" // thêm test header
+// git commit -m "chore(header): change chore header" // thay đổi cấu hình header
+
+
+
 
 // *************************
 // git push : đẩy file lên server
@@ -46,9 +70,7 @@
 // git log : xem lịch sử commit
 // git status : xem trạng thái 
 // git diff : xem thay đổi
-// git reset : xóa commit
-// các tag Commit cơ bản 
-
+// git reset : xóa commit// các tag Commit cơ bản 
 
 
 // 1 cấu trúc file cơ bản là 
@@ -57,7 +79,6 @@
 // file js: là file chứa code
 // work flow: là file chứa các hướng dẫn làm việc
 // fixed  issue  // sửa đổi các cấu trúc 
-
 
 
 // git log : xem lịch sử commit
@@ -80,30 +101,7 @@
 // git status : xem trạng thái
 // git rev-parse --show-toplevel : xem đường dẫn thư mục
 // git remote -v : xem remote
-
-
-
-
-// Git commit theo chuẩn 
-// 1. Tên commit không quá 50 ký tự
-// 2. Tên commit không viết hoa
-// 3. Tên commit không có dấu câu
-// 4. Tên commit không có dấu cách ở đầu
-// hạn chế 2 commit cùng một lúc
-
-
-// type(scope): subject // nội dung commit 
-// type: loại commit
-// scope: phạm vi commit
-// subject: nội dung commit
-
-// git commit -m "fix(footer): fix footer" // sửa lỗi footer
-// git commit -m "feat(header): add header" // thêm header
-// git commit -m "refactor(header): refactor header" // tái cấu trúc header
-// git commit -m "style(header): change style header" // thay đổi style header
-// git commit -m "docs(header): change docs header" // thay đổi tài liệu header
-// git commit -m "test(header): add test header" // thêm test header
-// git commit -m "chore(header): change chore header" // thay đổi cấu hình header
+// git log --oneline : xem lịch sử commit
 
 
 
@@ -114,17 +112,6 @@
 // issue là gì 
 // là vấn đề cần giải quyết
 // Issue là một khái niệm trong quản lý mã nguồn với Git, thường được sử dụng trong các dự án phát triển phần mềm. Khi bạn gặp một vấn đề nào đó trong mã nguồn, bạn có thể tạo một "Issue" để mô tả vấn đề đó. Các thành viên khác trong dự án có thể thảo luận và đóng góp ý kiến để giải quyết vấn đề đó. 
-
-// improve "Cải thiện"
-// feature "Tính năng "
-// fix "Sửa lỗi"
-// refactor "Tái cấu trúc"
-// style "Thay đổi style"
-// docs "Thay đổi tài liệu" 
-// test "Thêm test"
-// chore "Thay đổi cấu hình"
-// perf "Cải thiện hiệu suất"
-// revert "Quay lại commit trước đó"
 
 
 // hotfix "Sửa lỗi nhanh"và bắt buộc phải merge vào master ngay lập tức 
@@ -139,11 +126,25 @@
 // cái code mà bạn viêt ra phải được giám sát và kiểm tra gọi là code review gọi là
 // unit test là gì
 // là kiểm tra từng phần nhỏ của code
+
 // Unit Test là một phương pháp kiểm thử phần mềm, trong đó các đơn vị hoặc thành phần của phần mềm được kiểm tra. Mục tiêu của kiểm thử này là xác định xem mỗi phần của phần mềm hoạt động đúng như dự kiến hay không.
 // integration test là gì
 // là kiểm tra tính tương tác giữa các phần của code
-
 // tại sao chúng ta lai tách future từ develop là vì để phân biệt rõ ràng giữa các tính năng đang phát triển và các tính năng đã hoàn thành 
+
+
+
+
+// improve "Cải thiện"
+// feature "Tính năng "
+// fix "Sửa lỗi"
+// refactor "Tái cấu trúc"
+// style "Thay đổi style"
+// docs "Thay đổi tài liệu" 
+// test "Thêm test"
+// chore "Thay đổi cấu hình"
+// perf "Cải thiện hiệu suất"
+// revert "Quay lại commit trước đó"
 
 
 
@@ -167,15 +168,8 @@
 /// Trigger khi có commit mới: Khi có commit mới vào nhánh master, trigger sẽ kích hoạt một hành động như kiểm tra hoặc triển khai.
 // Trigger khi có pull request mới: Khi có pull request mới, trigger sẽ kích hoạt một hành động như kiểm tra hoặc thông báo.
 
-
 // git rebase là gì 
 // là sắp xếp lại commit
-
-
-
-
-
-
 
 // git push origin master // đẩy code lên nhánh master
 // git push -u origin master // đẩy code lên nhánh master và set nhánh master là nhánh mặc định
@@ -193,7 +187,6 @@
 // ✗ git branch --set-upstream-to=origin/develop develop là tên nhánh local, origin/develop là tên nhánh remote 
 
 // git checkout -b feature/1-add-screen develop // tạo nhánh feature/1-add-screen từ nhánh develop
-
 
 
 
@@ -220,7 +213,8 @@
 // ➜  Github  git: (main) ✗ git tag 'v1.0.1'
 // ➜  Github  git: (main) ✗ git push--tags
 
-
+// cách backup lại brand 
+// cách xoá brand 
 
 
 
